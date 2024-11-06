@@ -134,7 +134,7 @@ button:hover {
 @media (max-width: 768px) {
     /* スマートフォン用のレスポンシブ対応 */
     .locafind {
-        font-size: 40px; /* フォントサイズを調整 */
+        font-size: 55px; /* フォントサイズを調整 */
     }
     .container {
         width: 100%; /* コンテナの幅を100%に設定 */
