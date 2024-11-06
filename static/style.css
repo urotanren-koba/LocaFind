@@ -126,3 +126,17 @@ button:hover {
     margin: 15px 0;
 
 }
+
+@media (max-width: 768px) {
+    /* スマホ用のスタイル */
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* 他のレスポンシブ用のスタイルをここに追加 */
+    }
