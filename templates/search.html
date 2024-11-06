@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocaFind/検索</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+    <meta charset="UTF-8">
+    <link rel="icon" href="{{ url_for('static', path='images/mapchatファビコン.webp') }}">
+
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="link-home"><h1>新発見へ</h1></a>
+        <form action="/results" method="get">
+            <label for="query">場所の種類:</label>
+            <input type="text" id="query" name="query" placeholder="例: 近くの〇〇、名前など、カフェ、レストラン" required><br><br>
+
+            <label for="location_name">地域名:</label>
+            <input type="text" id="location_name" name="location_name" placeholder="例:地名 〇〇区など" required><br><br>
+
+            <label for="open_now">営業状況:</label>
+            <select id="open_now" name="open_now">
+                <option value="">指定なし</option>
+                <option value="true">営業中のみ</option>
+            </select><br><br>
+
+            <label for="price_level">価格帯:</label>
+            <select id="price_level" name="price_level">
+                <option value="">指定なし</option>
+                <option value="1">安価　　(ファストフード、カフェ、食堂など)</option>
+                <option value="2">普通　　(一般的なレストラン、カジュアルな飲食店など)</option>
+                <option value="3">高価　　(高級レストラン、専門店など)</option>
+                <option value="4">最高価　(超高級レストラン、高級料亭など)</option>
+            </select><br><br>
+
+            <label for="rating">最低評価:</label>
+            <input type="number" id="rating" name="rating" min="1" max="5" step="0.1" placeholder="例: 4.0"><br><br>
+
+            <button type="submit">検索</button>
+        </form>
+    </div>
+</body>
+</html>
