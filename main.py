@@ -229,6 +229,11 @@ def chat(
         error_msg = f"予期せぬエラーが発生しました: {str(e)}"
         logger.error(error_msg, exc_info=True)
         raise HTTPException(status_code=500, detail=error_msg)
+    
+# HEADリクエストの対応
+@app.head("/")
+async def head_root():
+    return {"message": "OK"}
 
 @app.get("/")
 def read_root():
